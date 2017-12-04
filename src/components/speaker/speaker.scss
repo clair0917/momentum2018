@@ -1,0 +1,121 @@
+// Speaker
+//
+// This is the speaker component and collection
+//
+// Markup: speaker.twig
+//
+// Style guide: Components.speaker
+
+// Import site utilities.
+@import '../../global/utils/init';
+
+.speaker-wrapper {
+  background-color: $color-ma-aqua;
+}
+
+.speaker__collection-header {
+  width: 100%;
+  display: inline-block;
+  background-color: $color-ma-lavender;
+  margin-bottom: 20px;
+  margin-left: -20px;
+
+  @include breakpoint ($bp-sm) {
+    width: 75%;
+  }
+
+  .speaker__collection-title {
+    @include font-stack-heavy;
+    @include fontsize(24)
+    color: $color-white;
+    text-transform: uppercase;
+    padding-left: 40px;
+
+    @include breakpoint ($bp-sm) {
+      float: right;
+      padding-right: 25%;
+    }
+  }
+}
+
+.speaker__items {
+
+  @include breakpoint ($bp-sm) {
+    display: flex;
+    flex-flow: row wrap;
+    margin-top: 20px;
+  }
+}
+
+.speaker__item {
+  position: relative;
+  width: 100%;
+  max-width: 242px;
+  margin: 0 auto 30px;
+
+  @include breakpoint ($bp-sm) {
+    width: 49.5%;
+    max-width: none;
+  }
+
+  @include breakpoint ($bp-md) {
+    display: inline-block;
+    margin: 0 0 30px;
+    max-width: 465px;
+  }
+
+  @include breakpoint ($bp-md) {
+    max-width: none;
+  }
+
+  .speaker__image {
+    @include cut-corner-blue;
+
+    @include breakpoint ($bp-sm) {
+      max-width: 230px;
+      margin-right: 13px;
+    }
+
+    @include breakpoint ($bp-md) {
+      max-width: 280px;
+      float: left;
+    }
+  }
+
+  .speaker__name {
+    @include font-stack-heavy;
+    @include fontsize(24);
+    text-transform: uppercase;
+    color: $color-ma-orange;
+
+    @include breakpoint ($bp-sm) {
+      padding-top: 10px;
+    }
+  }
+
+  .speaker__title,
+  .speaker__company {
+    @include fontsize(18);
+    color: $color-black;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

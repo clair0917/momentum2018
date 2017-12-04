@@ -1,0 +1,30 @@
+{
+  "section_title": "<h2>Join us for Momentum 2018</h2>",
+  "sponsors": [
+    {
+      "name": "IBM",
+      "link": "#",
+      "logo": "../assets/ibm.png"
+    },
+    {
+      "name": "Oracle",
+      "link": "#",
+      "logo": "../assets/oracle.png"
+    },
+    {
+      "name": "Century Link",
+      "link": "#",
+      "logo": "../assets/century-link.png"
+    },
+    {
+      "name": "Intel",
+      "link": "#",
+      "logo": "../assets/intel.png"
+    },
+    {
+      "name": "Zebra",
+      "link": "#",
+      "logo": "../assets/zebra.png"
+    }
+  ]
+}

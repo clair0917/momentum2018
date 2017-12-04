@@ -1,0 +1,20 @@
+{{ attach_library('momentum2018/icon-breaker') }}
+<div class="icon-breaker__wrapper section-wrapper edge-lav">
+ <div class="section-content">
+    {%
+      include '../section-title/section-title.twig' with {
+      'title' : section_title
+      } only
+    %}
+    <div class="icon-breaker__items">
+      {% for item in items %}
+      <div class="icon-breaker__item">
+        <img src="{{ item.image }}" alt="" />
+        <div class="icon-breaker__item-content">
+          {{ item.content }}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+ </div>
+</div>

@@ -1,0 +1,30 @@
+<div class="speaker-wrapper section-wrapper edge-red">
+    {%
+      include '../section-title/section-title.twig' with {
+        'title' : section_title
+      } only
+    %}
+
+    <div class="speaker__collections">
+      {% for item in speaker_collections %}
+      <div class="speaker__collection-header">
+        <div class="speaker__collection-title">{{ item.speaker_collection }}</div>
+      </div>
+
+      <div class="speaker__items section-content">
+        {% for item in item.speakers %}
+        <div class="speaker__item">
+          <a href="" class="speaker__item--popup">
+            <div class="speaker__image">
+              <img src="{{ item.speaker_image }}" alt="">
+            </div>
+            <div class="speaker__name">{{ item.name }}</div>
+            <div class="speaker__title">{{ item.title }}</div>
+            <div class="speaker__company">{{ item.company }}</div>
+          </a>
+        </div>
+        {% endfor %}
+      </div>
+      {% endfor %}
+    </div>
+</div>

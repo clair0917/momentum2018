@@ -1,0 +1,54 @@
+{
+  "agenda_menu_items": [
+    {
+      "text": "Agenda",
+      "link": "#",
+      "subitems": [
+        {
+          "text": "Sessions",
+          "link": "#"
+        },
+        {
+          "text": "Track descriptions",
+          "link": "#"
+        },
+        {
+          "text": "Special Guests",
+          "link": "#"
+        }
+      ]
+    }
+  ],
+  "footer_menu_items": [
+    {
+      "text": "News",
+      "link": "#"
+    },
+    {
+      "text": "Details",
+      "link": "#"
+    },
+    {
+      "text": "Register",
+      "link": "#"
+    },
+    {
+      "text": "Contact Us",
+      "link": "#"
+    }
+  ],
+  "social_menu_items": [
+    {
+      "site": "twitter",
+      "link":"#"
+    },
+    {
+      "site": "linkedin",
+      "link":"#"
+    },
+    {
+      "site": "facebook",
+      "link":"#"
+    }
+  ]
+}

@@ -1,0 +1,119 @@
+// Agenda
+//
+// This is the agenda section
+//
+// Markup: agenda.twig
+//
+// Style guide: Components.agenda
+
+// Import site utilities.
+@import '../../global/utils/init';
+
+.agenda-by-day__header {
+  @include font-stack-heavy;
+  position: relative;
+  border-top: 2px solid $color-ma-dark-blue;
+  border-bottom: 2px solid $color-ma-dark-blue;
+  text-transform: uppercase;
+  margin-left: -20px;
+  padding: 20px;
+
+  @include breakpoint ($bp-sm) {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  &::before,
+  &::after {
+    position: absolute;
+    right: 275px;
+    content: '';
+    height: 2px;
+    width: 100%;
+    background-color: $color-ma-dark-blue;
+    top: -2px;
+  }
+
+  &::after {
+    top: auto;
+    bottom: -2px;
+  }
+
+  .agenda-by-day__dow {
+    @include fontsize(14);
+    display: block;
+
+    @include breakpoint ($bp-sm) {
+      @include fontsize(36);
+      display: inline-block;
+
+      &::after {
+        content: ',';
+        margin-left: -10px;
+      }
+    }
+  }
+
+  .agenda-by-day__date {
+    @include fontsize(28);
+    display: block;
+
+    @include breakpoint ($bp-sm) {
+      @include fontsize(36);
+      display: inline-block;
+    }
+  }
+}
+
+.agenda-by-day__items ul {
+  padding-top: 40px;
+}
+
+.agenda-by-day__item {
+  @include fontsize(18);
+  color: $color-white;
+  margin-bottom: 50px;
+
+  &.global .agenda-by-day__item-content-wrapper {
+    background-color: $color-ma-lavender;
+  }
+
+  &.sessions .agenda-by-day__item-content-wrapper {
+    background-color: $color-ma-dark-blue;
+  }
+
+  &.breaks .agenda-by-day__item-content-wrapper {
+    background-color: $color-ma-lite-blue;
+  }
+
+  .agenda-by-day__item-content-wrapper {
+    padding: 0 10px 10px;
+
+    @include breakpoint ($bp-sm) {
+      padding: 10px;
+    }
+  }
+
+  .agenda-by-day__item-time {
+    text-transform: uppercase;
+    padding: 10px 0;
+
+    @include breakpoint ($bp-sm) {
+      @include fontsize(24);
+      width: 35%;
+      float: left;
+      padding: 0;
+    }
+  }
+
+  .agenda-by-day__item-content {
+    @include font-stack-heavy;
+
+    @include breakpoint ($bp-sm) {
+      @include font-stack-base;
+      @include fontsize(24);
+      display: inline-block;
+      width: 65%;
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{{ attach_library('momentum2018/footer') }}
+<div class="footer">
+  <div class="footer__top">
+    <div class="footer__branding">
+      <img class="footer-logo" src="../assets/white-logo.svg" alt="">
+      <div class="footer__app-links">
+        <span class="app-links__header">Get the Momentum App</span>
+        <a href=""><img class="app-links--img" src="../assets/play-store.svg" alt=""></a>
+        <a href=""><img class="app-links--img" src="../assets/app-store.svg" alt=""></a>
+      </div>
+    </div>
+    <div class="footer__links">
+      <div class="footer__menus">
+        <ul class="agenda-menu">
+            {% for item in agenda_menu_items %}
+            <li><a href="{{ item.link }}">{{ item.text }}</a>
+              <ul>
+                {% for item in item.subitems %}
+                  <li><a href="{{ item.link }}">{{ item.text }}</a>
+                {% endfor %}
+              </ul>
+            </li>
+            {% endfor %}
+        </ul>
+        <ul class="main-menu">
+          {% for item in footer_menu_items %}
+          <li><a href="{{ item.link }}">{{ item.text }}</a>
+          {% endfor %}
+        </ul>
+      </div>
+      <div class="footer__social">
+        <ul>
+          {% for item in social_menu_items %}
+          <li>
+            <a class="{{ item.site }}" href="{{ item.link }}"></a>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer__copyright">
+    <a class="external" href="">www.manh.com</a>
+    <p>&copy; {{ "now"|date("Y") }} Manhattan Associates. All rights reserved.</p>
+  </div>
+</div>

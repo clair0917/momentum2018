@@ -1,0 +1,19 @@
+<div class="faq section-wrapper">
+  {%
+    include '../section-title/section-title.twig' with {
+    'title' : section_title
+    } only
+  %}
+
+  {% for item in questions %}
+   <div class="faq-set section-content accordion-section">
+     <div class="faq-set__question accordion-trigger">
+       {{ item.question }}
+     </div>
+
+     <div class="faq-set__answer accordion-content">
+       {{ item.content }}
+     </div>
+   </div>
+  {% endfor %}
+</div>

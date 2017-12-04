@@ -1,0 +1,109 @@
+body {
+  font-family: 'avenir', 'Arial', sans-serif;
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: #000000; }
+  @media (min-width: 1000px) {
+    body {
+      font-size: 24px;
+      font-size: 1.5rem; } }
+
+h2 {
+  font-family: 'avenir-heavy', 'Arial', sans-serif;
+  font-size: 28px;
+  font-size: 1.75rem;
+  color: #071d49;
+  text-transform: uppercase; }
+  @media (min-width: 768px) {
+    h2 {
+      font-size: 48px;
+      font-size: 3rem; } }
+  @media (min-width: 1000px) {
+    h2 {
+      font-size: 54px;
+      font-size: 3.375rem; } }
+
+.agenda-by-day__header {
+  font-family: 'avenir-heavy', 'Arial', sans-serif;
+  position: relative;
+  border-top: 2px solid #071d49;
+  border-bottom: 2px solid #071d49;
+  text-transform: uppercase;
+  margin-left: -20px;
+  padding: 20px; }
+  @media (min-width: 768px) {
+    .agenda-by-day__header {
+      text-align: center;
+      margin-bottom: 40px; } }
+  .agenda-by-day__header::before, .agenda-by-day__header::after {
+    position: absolute;
+    right: 275px;
+    content: '';
+    height: 2px;
+    width: 100%;
+    background-color: #071d49;
+    top: -2px; }
+  .agenda-by-day__header::after {
+    top: auto;
+    bottom: -2px; }
+  .agenda-by-day__header .agenda-by-day__dow {
+    font-size: 14px;
+    font-size: 0.875rem;
+    display: block; }
+    @media (min-width: 768px) {
+      .agenda-by-day__header .agenda-by-day__dow {
+        font-size: 36px;
+        font-size: 2.25rem;
+        display: inline-block; }
+        .agenda-by-day__header .agenda-by-day__dow::after {
+          content: ',';
+          margin-left: -10px; } }
+  .agenda-by-day__header .agenda-by-day__date {
+    font-size: 28px;
+    font-size: 1.75rem;
+    display: block; }
+    @media (min-width: 768px) {
+      .agenda-by-day__header .agenda-by-day__date {
+        font-size: 36px;
+        font-size: 2.25rem;
+        display: inline-block; } }
+
+.agenda-by-day__items ul {
+  padding-top: 40px; }
+
+.agenda-by-day__item {
+  font-size: 18px;
+  font-size: 1.125rem;
+  color: #ffffff;
+  margin-bottom: 50px; }
+  .agenda-by-day__item.global .agenda-by-day__item-content-wrapper {
+    background-color: #6F7BD4; }
+  .agenda-by-day__item.sessions .agenda-by-day__item-content-wrapper {
+    background-color: #071d49; }
+  .agenda-by-day__item.breaks .agenda-by-day__item-content-wrapper {
+    background-color: #2C5697; }
+  .agenda-by-day__item .agenda-by-day__item-content-wrapper {
+    padding: 0 10px 10px; }
+    @media (min-width: 768px) {
+      .agenda-by-day__item .agenda-by-day__item-content-wrapper {
+        padding: 10px; } }
+  .agenda-by-day__item .agenda-by-day__item-time {
+    text-transform: uppercase;
+    padding: 10px 0; }
+    @media (min-width: 768px) {
+      .agenda-by-day__item .agenda-by-day__item-time {
+        font-size: 24px;
+        font-size: 1.5rem;
+        width: 35%;
+        float: left;
+        padding: 0; } }
+  .agenda-by-day__item .agenda-by-day__item-content {
+    font-family: 'avenir-heavy', 'Arial', sans-serif; }
+    @media (min-width: 768px) {
+      .agenda-by-day__item .agenda-by-day__item-content {
+        font-family: 'avenir', 'Arial', sans-serif;
+        font-size: 24px;
+        font-size: 1.5rem;
+        display: inline-block;
+        width: 65%; } }

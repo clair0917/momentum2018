@@ -1,0 +1,28 @@
+// Sponsors Section
+//
+// This is the sponsor component and collection
+//
+// Markup: sponsors.twig
+//
+// Style guide: Components.sponsors
+
+// Import site utilities.
+@import '../../global/utils/init';
+
+.sponsors__items {
+
+  @include breakpoint ($bp-sm) {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+  }
+
+  .sponsors__item {
+    text-align: center;
+
+    @include breakpoint ($bp-sm) {
+      display: inline-block;
+      width: 30%;
+    }
+  }
+}

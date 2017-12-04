@@ -1,0 +1,153 @@
+//=======================================================
+// Mixins
+//=======================================================
+
+// Clearfix
+@mixin clearfix {
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+// Makes an element visually hidden, but accessible.
+// @see http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+@mixin element-invisible {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+// Turns off the element-invisible effect.
+@mixin element-invisible-off {
+  position: static !important;
+  clip: auto;
+  height: auto;
+  width: auto;
+  overflow: auto;
+}
+
+// Makes an element visually hidden by default, but visible when focused.
+@mixin element-focusable {
+  @include element-invisible;
+
+  &:active,
+  &:focus {
+    @include element-invisible-off;
+  }
+}
+
+// Helper function for working with Sass maps.
+// Example: @include print($configuration);
+@mixin print($declarations) {
+  @each $property, $value in $declarations {
+    #{$property}: $value;
+  }
+}
+
+// Alignment Mixins
+
+// Veritcally align an element
+@mixin vertical-align($position: absolute)  {
+  position: $position;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+// Horizontaly align an element
+@mixin horizontal-align($position: absolute) {
+  position: $position;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+// Vertically/Horizontaly center an element
+@mixin vertical-horizontal-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transform-origin: 50% 50%;
+}
+
+// Typography Mixins
+@mixin font-stack-base {
+  font-family: sans-serif;
+}
+
+@mixin font-stack-secondary {
+  font-family: serif;
+}
+
+@mixin fontsize($sizeValue: 16 ){
+  font-size: $sizeValue + px; //fallback for old browsers
+  font-size: (0.0625 * $sizeValue) + rem;
+}
+
+// Shortcuts
+
+// Sliced Corner
+// angled to 37degrees per brand standard
+@mixin cut-corner-white(){
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -5px;
+    border-color: transparent;
+    border-style: solid;
+    border-width: 30px;
+    border-left-color: $color-white;
+    border-top-color: $color-white;
+    transform: rotate(8deg);
+  }
+}
+
+@mixin cut-corner-blue(){
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -5px;
+    border-color: transparent;
+    border-style: solid;
+    border-width: 30px;
+    border-left-color: $color-ma-aqua;
+    border-top-color: $color-ma-aqua;
+    transform: rotate(8deg);
+  }
+}
+
+// Border shorthand (for > 1 side && < 4 sides)
+@mixin border ($style,  $sides...){
+  @if ($style != "") {
+    @if ($sides == "") {
+      border: $style;
+    }
+    @else {
+      @each $side in $sides {
+        @if ($side == 'top' or
+          $side == 'right' or
+          $side == 'bottom' or
+          $side == 'left') {
+          border-#{$side}: $style;
+        }
+      }
+    }
+  }
+}
+
+// Background image shorthand
+@mixin background($imgpath, $position: center, $size: cover, $repeat: no-repeat) {
+  background: {
+    image: url($imgpath);
+    position: $position;
+    size: $size;
+    repeat: $repeat;
+  }
+}

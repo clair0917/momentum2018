@@ -1,0 +1,36 @@
+{{ attach_library('momentum2018/block-quote') }}
+{% import '@momentum_2018/icons/icons.twig' as icons %}
+<div class="block-quotes section-wrapper bg-aqua edge-lav">
+  <div class="section-content">
+    {%
+      include '../section-title/section-title.twig' with {
+        'title' : section_title
+      } only
+    %}
+    <div class="block-quotes__items">
+      {% for item in quotes %}
+      <div class="block-quote__item">
+        <div class="block-quote-icon">
+          {{ icons.get('icon-quote', 'icon icon--quote') }}
+        </div>
+        <div class="block-quote__content-wrapper">
+          <div class="block-quote__content">
+            &Prime;{{ item.content }}&Prime;
+          </div>
+          <div class="block-quote__author">
+            <span class="quote-author">{{ item.author }},</span>
+            <div class="quote-company">
+              <span class="company-name">
+                {{ item.company.name }}
+              </span>
+              <div class="company-logo">
+                <img src="{{ item.company.logo }}" alt="{{ item.company.name }}">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>

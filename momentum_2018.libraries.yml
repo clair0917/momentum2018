@@ -1,0 +1,76 @@
+# These lines define the momentum_2018/global library.
+global:
+  css:
+    # The SMACSS category, "base", is loaded before other categories. Drupal 8
+    # loads stylesheets based on the SMACSS ordering of:
+    # base, layout, component, state, theme
+    base:
+      dist/css/global.css: {}
+
+
+# Example external library.
+# webfonts:
+#   version: 1.x
+#   js:
+#     https://fast.fonts.net/example.js: { type: external, attributes: { async: true }}
+
+# Attach each library by using attach_library() within the components twig template.
+# More info: https://www.drupal.org/node/2456753
+
+# Example component library.
+# site-logo:
+#   css:
+#     component:
+#       dist/css/site-logo.css: {}
+#   # If this library had JavaScript you could specify it like this:
+#   js:
+#     js/script.js: {}
+#   # If this library had dependencies on other libraries, you could specify it like this:
+#   dependencies:
+#     - momentum_2018/clearfix
+#     - momentum_2018/visually-hidden
+
+block-quote:
+  css:
+    component:
+      dist/css/block-quote.css: {}
+
+buttons:
+  css:
+    component:
+      dist/css/buttons.css: {}
+
+cta:
+  css:
+    component:
+      dist/css/cta.css: {}
+
+footer:
+  css:
+    component:
+      dist/css/footer.css: {}
+
+header:
+  css:
+    component:
+      dist/css/header.css: {}
+
+block-quote:
+  css:
+    component:
+      dist/css/block-quote.css: {}
+
+push-edge:
+  css:
+    component:
+      dist/css/push-edge.css: {}
+
+section-title:
+  css:
+    component:
+      dist/css/section-title.css: {}
+
+sponsors:
+  css:
+    component:
+      dist/css/sponsors.css: {}

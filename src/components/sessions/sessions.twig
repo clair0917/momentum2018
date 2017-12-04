@@ -1,0 +1,50 @@
+<div class="sessions section-wrapper edge-lav">
+  {%
+    include '../section-title/section-title.twig' with {
+    'title' : section_title
+    } only
+  %}
+  <div class="sessions-filters-wrapper">
+    <div class="section-content">
+      <div class="filter-title">
+        {{ filter_title }}
+      </div>
+      <div class="filter-content">
+        {{ filter_content }}
+      </div>
+      <select id="session-filters" name="sessions-select">
+        <option value="Sessions" selected>Choose Session</option>
+        <option value="Session1">Value 1</option>
+        <option value="Session2">Value 2</option>
+        <option value="Session3">Value 3</option>
+      </select>
+    </div>
+  </div>
+  <div class="sessions__items">
+    {% for item in sessions %}
+    <div class="sessions__item">
+      <div class="sessions__date-time-wrapper">
+        <div class="sessions__date-time section-content">
+          <span class="session-date">{{ item.session_date }}</span>
+          <span class="session-time">{{ item.session_time }}</span>
+        </div>
+      </div>
+      <div class="sessions__content section-content">
+        <div class="session__title"><a href="{{ item.session_link }}">{{ item.session_title }}</a></div>
+        <div class="session__speakers">
+          <div class="sessions__content-label">Speakers(s)</div>
+          <a href="{{ item.speaker_link }}">{{ item.session_speaker }}</a>
+        </div>
+        <div class="session__track">
+          <div class="sessions__content-label">Track(s)</div>
+          <a href="{{ item.track_link }}">{{ item.session_track }}</a>
+        </div>
+        <div class="session__location">
+          <div class="sessions__content-label">Location</div>
+          <span class="session-location">{{ item.session_location }}</span>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>

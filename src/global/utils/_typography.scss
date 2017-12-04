@@ -1,0 +1,64 @@
+// Type
+//
+// Markup:
+// <h3 style="margin-bottom: 10px">Heavy</h3>
+// <span style="font-size: 1rem; font-style: italic">font-stack-heavy</span>
+// <br />
+// <span style="font: 1rem 'avenir-heavy'"> Avenir-Heavy </span>
+// <div style="font: 30px/2 'avenir-heavy'"> Proin Eget Tortor Risus </div>
+// <hr />
+// <h3 style="margin-bottom: 10px">Base</h3>
+// <span style="font-size: 1rem; font-style: italic">font-stack-base</span>
+// <br />
+// <span style="font: 1rem 'avenir'"> Avenir-Roman </span>
+// <br /><br />
+// <div style="font: 20px/1.2 'avenir'"> Proin eget tortor risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sollicitudin molestie malesuada. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. </div>
+// <hr />
+// <h3 style="margin-bottom: 10px">Thin</h3>
+// <span style="font-size: 1rem; font-style: italic">font-stack-thin</span>
+// <br />
+// <span style="font: 1rem 'avenir-book'"> Avenir-Book </span>
+// <br /><br />
+// <div style="font: 20px/1.2 'avenir'"><ul><li>Avenir Book</li><li>Avenir Book</li><li>Avenir Book</li></ul></div>
+//
+// Weight: 999
+//
+// Style guide: Type
+
+@mixin font-stack-base {
+  font-family: 'avenir', 'Arial', sans-serif;
+}
+
+@mixin font-stack-thin {
+  font-family: 'avenir-book', 'Arial', sans-serif;
+}
+
+@mixin font-stack-heavy {
+  font-family: 'avenir-heavy', 'Arial', sans-serif;
+}
+
+body {
+  @include font-stack-base;
+  @include fontsize(18);
+  line-height: 1.6;
+  color: $color-black;
+
+  @include breakpoint ($bp-md) {
+    @include fontsize(24);
+  }
+}
+
+h2 {
+  @include font-stack-heavy;
+  @include fontsize(28);
+  color: $color-ma-dark-blue;
+  text-transform: uppercase;
+
+  @include breakpoint ($bp-sm) {
+    @include fontsize(48);
+  }
+
+  @include breakpoint ($bp-md) {
+    @include fontsize(54);
+  }
+}

@@ -1,0 +1,71 @@
+// Block Quotes
+//
+// Markup: block-quote.twig
+//
+// Style guide: Components.block-quote
+
+// Import site utilities.
+@import '../../global/utils/init';
+
+.block-quotes__items {
+  padding-top: 80px;
+
+  @include breakpoint ($bp-sm) {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &:first-child {
+    padding-bottom: 100px;
+  }
+}
+
+.block-quote__item {
+
+  @include breakpoint ($bp-sm) {
+    width: 45%;
+    display: flex;
+  }
+
+  .block-quote-icon {
+    width: 100%;
+    max-width: 72px;
+    margin: 0 auto;
+
+    @include breakpoint ($bp-sm) {
+      margin-right: 30px;
+    }
+  }
+
+  .block-quote__content {
+    @include fontsize(24);
+    line-height: 1.3;
+    padding: 25px 0;
+
+    @include breakpoint ($bp-md) {
+      @include fontsize(36);
+    }
+  }
+
+  .block-quote__author {
+    @include font-stack-heavy;
+    @include fontsize(18);
+    display: block;
+    color: $color-ma-orange;
+
+    @include breakpoint ($bp-md) {
+      @include fontsize(24);
+    }
+
+    .quote-author {
+      display: block;
+      padding-bottom: 0.4rem;
+    }
+  }
+
+  .company-logo {
+    display: inline-block;
+    width: 100%;
+    padding-top: 20px;
+  }
+}

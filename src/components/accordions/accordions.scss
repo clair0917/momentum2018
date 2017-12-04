@@ -1,0 +1,20 @@
+//Accordion Styles
+
+// Import site utilities.
+@import '../../global/utils/init';
+
+.accordion-trigger {
+  cursor: pointer;
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 1s ease-out;
+
+  &.open {
+    transition: max-height 1s ease-in;
+    height: auto;
+    max-height: 1000px;
+  }
+}

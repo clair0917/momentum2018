@@ -1,0 +1,38 @@
+// Buttons
+//
+// This is the global button, intended to be a standalone component for removal after the confrence.
+//
+// Markup: buttons.twig
+//
+// Style guide: Components.buttons
+
+// Import site utilities.
+@import '../../global/utils/init';
+
+.registeration-button {
+  padding: 35px 0;
+}
+
+.btn {
+  @include font-stack-heavy;
+  @include fontsize(18);
+  @include cut-corner-white;
+  position: relative;
+  display: block;
+  background-color: $color-ma-orange;
+  color: $color-white;
+  padding: 20px 10px;
+  width: 100%;
+  max-width: 280px;
+  margin: 0 auto;
+  text-align: center;
+
+  @include breakpoint ($bp-sm) {
+    max-width: 585px;
+  }
+
+  &:hover {
+    text-decoration: none;
+    background-color: $color-ma-dark-blue;
+  }
+}

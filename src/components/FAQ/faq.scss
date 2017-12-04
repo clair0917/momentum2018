@@ -1,0 +1,38 @@
+// FAQs
+//
+// This is the frequently asked questions section
+//
+// Markup: faq.twig
+//
+// Style guide: Components.faq
+
+// Import site utilities.
+@import '../../global/utils/init';
+
+
+.faq-set__question {
+  @include font-stack-heavy;
+  @include fontsize(18);
+  position: relative;
+  color: $color-ma-orange;
+  border-top: 2px solid $color-ma-dark-blue;
+  padding: 18px 0;
+
+  @include breakpoint ($bp-sm) {
+    @include fontsize(24);
+  }
+
+  &::before {
+    position: absolute;
+    right: 275px;
+    content: '';
+    height: 2px;
+    width: 100%;
+    background-color: $color-ma-dark-blue;
+    top: -2px;
+  }
+}
+
+.faq-set__answer.open {
+  padding-bottom: 20px;
+}

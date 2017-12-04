@@ -1,0 +1,104 @@
+body {
+  font-family: 'avenir', 'Arial', sans-serif;
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: #000000; }
+  @media (min-width: 1000px) {
+    body {
+      font-size: 24px;
+      font-size: 1.5rem; } }
+
+h2 {
+  font-family: 'avenir-heavy', 'Arial', sans-serif;
+  font-size: 28px;
+  font-size: 1.75rem;
+  color: #071d49;
+  text-transform: uppercase; }
+  @media (min-width: 768px) {
+    h2 {
+      font-size: 48px;
+      font-size: 3rem; } }
+  @media (min-width: 1000px) {
+    h2 {
+      font-size: 54px;
+      font-size: 3.375rem; } }
+
+@media (min-width: 768px) {
+  .header {
+    width: 90%;
+    max-width: 1600px;
+    margin: 0 auto;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between; } }
+
+.momentum-logo {
+  width: 150px;
+  margin: 0 auto; }
+  @media (min-width: 768px) {
+    .momentum-logo {
+      margin: 0;
+      width: 350px; } }
+  @media (min-width: 1000px) {
+    .momentum-logo {
+      width: 400px; } }
+
+.header__navigation {
+  width: 100%;
+  padding: 0 15px; }
+  .header__navigation .menu {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between; }
+    @media (min-width: 768px) {
+      .header__navigation .menu {
+        -ms-flex-pack: end;
+        justify-content: flex-end; } }
+  .header__navigation li {
+    text-align: center;
+    position: relative; }
+    @media (min-width: 768px) {
+      .header__navigation li {
+        margin-left: 20px; } }
+    .header__navigation li a {
+      font-family: 'avenir-heavy', 'Arial', sans-serif;
+      font-size: 14px;
+      font-size: 0.875rem;
+      display: block;
+      color: #071d49;
+      line-height: 2;
+      padding-left: 15px; }
+      .header__navigation li a::before {
+        background-image: url("../assets/nav-slash.svg");
+        background-position: left;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        content: '';
+        position: absolute;
+        top: 6px;
+        left: 0;
+        width: 12px;
+        height: 12px; }
+    .header__navigation li.register {
+      background-color: #e03c31; }
+      .header__navigation li.register::after {
+        content: '';
+        position: absolute;
+        top: -10px;
+        left: -5px;
+        border-color: transparent;
+        border-style: solid;
+        border-width: 30px;
+        border-left-color: #ffffff;
+        border-top-color: #ffffff;
+        transform: rotate(8deg); }
+      .header__navigation li.register a {
+        color: #ffffff;
+        padding: 0 5px 0 15px; }
+        .header__navigation li.register a::before {
+          display: none; }
+  .header__navigation li ul {
+    display: none; }

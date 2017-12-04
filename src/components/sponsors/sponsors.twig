@@ -1,0 +1,15 @@
+{{ attach_library('momentum2018/sponsors') }}
+<div class="sponsors section-wrapper">
+  {%
+    include '../section-title/section-title.twig' with {
+      'title' : section_title
+    } only
+  %}
+  <div class="sponsors__items">
+    {% for item in sponsors %}
+    <div class="sponsors__item">
+      <a href="{{ item.link }}"><img src="{{ item.logo }}" alt="{{ item.name }}"></a>
+    </div>
+    {% endfor %}
+  </div>
+</div>

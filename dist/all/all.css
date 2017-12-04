@@ -1,0 +1,1449 @@
+body {
+  font-family: 'avenir', 'Arial', sans-serif;
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: #000000; }
+  @media (min-width: 1000px) {
+    body {
+      font-size: 24px;
+      font-size: 1.5rem; } }
+
+h2 {
+  font-family: 'avenir-heavy', 'Arial', sans-serif;
+  font-size: 28px;
+  font-size: 1.75rem;
+  color: #071d49;
+  text-transform: uppercase; }
+  @media (min-width: 768px) {
+    h2 {
+      font-size: 48px;
+      font-size: 3rem; } }
+  @media (min-width: 1000px) {
+    h2 {
+      font-size: 54px;
+      font-size: 3.375rem; } }
+
+@font-face {
+  font-family: 'avenir';
+  src: url("../../fonts/Avenir-Roman.otf") format("otf"); }
+
+@font-face {
+  font-family: 'avenir-heavy';
+  src: url("../../fonts/Avenir-Heavy.otf") format("otf"); }
+
+@font-face {
+  font-family: 'avenir-book';
+  src: url("../../fonts/Avenir-Book.otf") format("otf"); }
+
+/* Document
+   ========================================================================== */
+/**
+ * 1. Change the default font family in all browsers (opinionated).
+ * 2. Correct the line height in all browsers.
+ * 3. Prevent adjustments of font size after orientation changes in
+ *    IE on Windows Phone and in iOS.
+ */
+html {
+  box-sizing: border-box;
+  font-family: sans-serif;
+  /* 1 */
+  line-height: 1.15;
+  /* 2 */
+  -ms-text-size-adjust: 100%;
+  /* 3 */
+  -webkit-text-size-adjust: 100%;
+  /* 3 */ }
+
+* {
+  box-sizing: inherit; }
+  *::before, *::after {
+    box-sizing: inherit; }
+
+/* Sections
+   ========================================================================== */
+/**
+ * Remove the margin in all browsers (opinionated).
+ */
+body {
+  margin: 0;
+  font-size: 100%;
+  letter-spacing: 0.02em; }
+
+/**
+ * Add the correct display in IE 9-.
+ */
+article,
+aside,
+footer,
+header,
+nav,
+section {
+  display: block; }
+
+/**
+ * Headings are always 'just a bit bigger' than body copy.
+ * See: http://csswizardry.com/2016/02/managing-typography-on-large-apps/
+ */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 1.25rem;
+  margin: 0; }
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in IE.
+ */
+figcaption,
+figure,
+main {
+  /* 1 */
+  display: block; }
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */ }
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+pre {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1rem;
+  /* 2 */ }
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * 1. Remove the gray background on active links in IE 10.
+ */
+a {
+  background-color: transparent;
+  /* 1 */
+  color: #2b5798;
+  text-decoration: none;
+  /**
+   * Remove the outline on focused links when they are also active or hovered
+   * in all browsers (opinionated).
+   */ }
+  a:active, a:hover {
+    outline-width: 0;
+    text-decoration: underline; }
+
+p {
+  margin: 0; }
+
+/**
+ * 1. Remove the bottom border in Firefox 39-.
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+  border-bottom: 0;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  text-decoration: underline dotted;
+  /* 2 */ }
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */ }
+
+/**
+ * Add the correct font style in Android 4.3-.
+ */
+dfn {
+  font-style: italic; }
+
+/**
+ * Add the correct background and color in IE 9-.
+ */
+mark {
+  background-color: #ff0;
+  color: #000; }
+
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%; }
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sub {
+  bottom: -0.25em; }
+
+sup {
+  top: -0.5em; }
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ */
+audio,
+video {
+  display: inline-block; }
+
+/**
+ * Add the correct display in iOS 4-7.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+/**
+ * Remove the border on images inside links in IE 10-.
+ */
+img {
+  border: 0;
+  height: auto;
+  max-width: 100%; }
+
+/**
+ * Hide the overflow in IE.
+ */
+svg:not(:root) {
+  overflow: hidden; }
+
+/* Forms
+   ========================================================================== */
+/**
+ * 1. Change the font styles in all browsers (opinionated).
+ * 2. Remove the margin in Firefox and Safari.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: sans-serif;
+  /* 1 */
+  margin: 0;
+  /* 2 */ }
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button,
+input {
+  /* 1 */
+  overflow: visible; }
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+button,
+select {
+  /* 1 */
+  text-transform: none; }
+
+/**
+ * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
+ *    controls in Android 4.
+ * 2. Correct the inability to style clickable types in iOS and Safari.
+ */
+button,
+html [type='button'],
+[type='reset'],
+[type='submit'] {
+  -webkit-appearance: button;
+  /* 2 */ }
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner,
+[type='button']::-moz-focus-inner,
+[type='reset']::-moz-focus-inner,
+[type='submit']::-moz-focus-inner {
+  border-style: none;
+  padding: 0; }
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+button:-moz-focusring,
+[type='button']:-moz-focusring,
+[type='reset']:-moz-focusring,
+[type='submit']:-moz-focusring {
+  outline: 1px dotted ButtonText; }
+
+/**
+ * Change the border, margin, and padding in all browsers (opinionated).
+ */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em; }
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+legend {
+  box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */ }
+
+/**
+ * 1. Add the correct display in IE 9-.
+ * 2. Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */ }
+
+/**
+ * Remove the default vertical scrollbar in IE.
+ */
+textarea {
+  overflow: auto; }
+
+/**
+ * 1. Add the correct box sizing in IE 10-.
+ * 2. Remove the padding in IE 10-.
+ */
+[type='checkbox'],
+[type='radio'] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type='number']::-webkit-inner-spin-button,
+[type='number']::-webkit-outer-spin-button {
+  height: auto; }
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+[type='search'] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */ }
+
+/**
+ * Remove the inner padding and cancel buttons in Chrome and Safari on macOS.
+ */
+[type='search']::-webkit-search-cancel-button,
+[type='search']::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */ }
+
+/* Interactive
+   ========================================================================== */
+/*
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in Edge, IE, and Firefox.
+ */
+details,
+menu {
+  display: block; }
+
+/*
+ * Add the correct display in all browsers.
+ */
+summary {
+  display: list-item; }
+
+/* Scripting
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ */
+canvas {
+  display: inline-block; }
+
+/**
+ * Add the correct display in IE.
+ */
+template {
+  display: none; }
+
+/* Hidden
+   ========================================================================== */
+/**
+ * Add the correct display in IE 10-.
+ */
+[hidden] {
+  display: none; }
+
+/* Lists
+   ========================================================================== */
+/**
+ * Unset default list margin and padding because if not
+ * we'll have to unset it every. single. time.
+ */
+ul,
+ol,
+dl {
+  margin: 0;
+  padding: 0; }
+
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+body {
+  font-family: 'avenir', 'Arial', sans-serif;
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: #000000; }
+  @media (min-width: 1000px) {
+    body {
+      font-size: 24px;
+      font-size: 1.5rem; } }
+
+h2 {
+  font-family: 'avenir-heavy', 'Arial', sans-serif;
+  font-size: 28px;
+  font-size: 1.75rem;
+  color: #071d49;
+  text-transform: uppercase; }
+  @media (min-width: 768px) {
+    h2 {
+      font-size: 48px;
+      font-size: 3rem; } }
+  @media (min-width: 1000px) {
+    h2 {
+      font-size: 54px;
+      font-size: 3.375rem; } }
+
+.accordion-trigger {
+  cursor: pointer; }
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 1s ease-out; }
+  .accordion-content.open {
+    transition: max-height 1s ease-in;
+    height: auto;
+    max-height: 1000px; }
+
+body {
+  font-family: 'avenir', 'Arial', sans-serif;
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: #000000; }
+  @media (min-width: 1000px) {
+    body {
+      font-size: 24px;
+      font-size: 1.5rem; } }
+
+h2 {
+  font-family: 'avenir-heavy', 'Arial', sans-serif;
+  font-size: 28px;
+  font-size: 1.75rem;
+  color: #071d49;
+  text-transform: uppercase; }
+  @media (min-width: 768px) {
+    h2 {
+      font-size: 48px;
+      font-size: 3rem; } }
+  @media (min-width: 1000px) {
+    h2 {
+      font-size: 54px;
+      font-size: 3.375rem; } }
+
+.agenda-by-day__header {
+  font-family: 'avenir-heavy', 'Arial', sans-serif;
+  position: relative;
+  border-top: 2px solid #071d49;
+  border-bottom: 2px solid #071d49;
+  text-transform: uppercase;
+  margin-left: -20px;
+  padding: 20px; }
+  @media (min-width: 768px) {
+    .agenda-by-day__header {
+      text-align: center;
+      margin-bottom: 40px; } }
+  .agenda-by-day__header::before, .agenda-by-day__header::after {
+    position: absolute;
+    right: 275px;
+    content: '';
+    height: 2px;
+    width: 100%;
+    background-color: #071d49;
+    top: -2px; }
+  .agenda-by-day__header::after {
+    top: auto;
+    bottom: -2px; }
+  .agenda-by-day__header .agenda-by-day__dow {
+    font-size: 14px;
+    font-size: 0.875rem;
+    display: block; }
+    @media (min-width: 768px) {
+      .agenda-by-day__header .agenda-by-day__dow {
+        font-size: 36px;
+        font-size: 2.25rem;
+        display: inline-block; }
+        .agenda-by-day__header .agenda-by-day__dow::after {
+          content: ',';
+          margin-left: -10px; } }
+  .agenda-by-day__header .agenda-by-day__date {
+    font-size: 28px;
+    font-size: 1.75rem;
+    display: block; }
+    @media (min-width: 768px) {
+      .agenda-by-day__header .agenda-by-day__date {
+        font-size: 36px;
+        font-size: 2.25rem;
+        display: inline-block; } }
+
+.agenda-by-day__items ul {
+  padding-top: 40px; }
+
+.agenda-by-day__item {
+  font-size: 18px;
+  font-size: 1.125rem;
+  color: #ffffff;
+  margin-bottom: 50px; }
+  .agenda-by-day__item.global .agenda-by-day__item-content-wrapper {
+    background-color: #6F7BD4; }
+  .agenda-by-day__item.sessions .agenda-by-day__item-content-wrapper {
+    background-color: #071d49; }
+  .agenda-by-day__item.breaks .agenda-by-day__item-content-wrapper {
+    background-color: #2C5697; }
+  .agenda-by-day__item .agenda-by-day__item-content-wrapper {
+    padding: 0 10px 10px; }
+    @media (min-width: 768px) {
+      .agenda-by-day__item .agenda-by-day__item-content-wrapper {
+        padding: 10px; } }
+  .agenda-by-day__item .agenda-by-day__item-time {
+    text-transform: uppercase;
+    padding: 10px 0; }
+    @media (min-width: 768px) {
+      .agenda-by-day__item .agenda-by-day__item-time {
+        font-size: 24px;
+        font-size: 1.5rem;
+        width: 35%;
+        float: left;
+        padding: 0; } }
+  .agenda-by-day__item .agenda-by-day__item-content {
+    font-family: 'avenir-heavy', 'Arial', sans-serif; }
+    @media (min-width: 768px) {
+      .agenda-by-day__item .agenda-by-day__item-content {
+        font-family: 'avenir', 'Arial', sans-serif;
+        font-size: 24px;
+        font-size: 1.5rem;
+        display: inline-block;
+        width: 65%; } }
+
+body {
+  font-family: 'avenir', 'Arial', sans-serif;
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: #000000; }
+  @media (min-width: 1000px) {
+    body {
+      font-size: 24px;
+      font-size: 1.5rem; } }
+
+h2 {
+  font-family: 'avenir-heavy', 'Arial', sans-serif;
+  font-size: 28px;
+  font-size: 1.75rem;
+  color: #071d49;
+  text-transform: uppercase; }
+  @media (min-width: 768px) {
+    h2 {
+      font-size: 48px;
+      font-size: 3rem; } }
+  @media (min-width: 1000px) {
+    h2 {
+      font-size: 54px;
+      font-size: 3.375rem; } }
+
+.block-quotes__items {
+  padding-top: 80px; }
+  @media (min-width: 768px) {
+    .block-quotes__items {
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-pack: justify;
+      justify-content: space-between; } }
+  .block-quotes__items:first-child {
+    padding-bottom: 100px; }
+
+@media (min-width: 768px) {
+  .block-quote__item {
+    width: 45%;
+    display: -ms-flexbox;
+    display: flex; } }
+
+.block-quote__item .block-quote-icon {
+  width: 100%;
+  max-width: 72px;
+  margin: 0 auto; }
+  @media (min-width: 768px) {
+    .block-quote__item .block-quote-icon {
+      margin-right: 30px; } }
+
+.block-quote__item .block-quote__content {
+  font-size: 24px;
+  font-size: 1.5rem;
+  line-height: 1.3;
+  padding: 25px 0; }
+  @media (min-width: 1000px) {
+    .block-quote__item .block-quote__content {
+      font-size: 36px;
+      font-size: 2.25rem; } }
+
+.block-quote__item .block-quote__author {
+  font-family: 'avenir-heavy', 'Arial', sans-serif;
+  font-size: 18px;
+  font-size: 1.125rem;
+  display: block;
+  color: #e03c31; }
+  @media (min-width: 1000px) {
+    .block-quote__item .block-quote__author {
+      font-size: 24px;
+      font-size: 1.5rem; } }
+  .block-quote__item .block-quote__author .quote-author {
+    display: block;
+    padding-bottom: 0.4rem; }
+
+.block-quote__item .company-logo {
+  display: inline-block;
+  width: 100%;
+  padding-top: 20px; }
+
+body {
+  font-family: 'avenir', 'Arial', sans-serif;
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: #000000; }
+  @media (min-width: 1000px) {
+    body {
+      font-size: 24px;
+      font-size: 1.5rem; } }
+
+h2 {
+  font-family: 'avenir-heavy', 'Arial', sans-serif;
+  font-size: 28px;
+  font-size: 1.75rem;
+  color: #071d49;
+  text-transform: uppercase; }
+  @media (min-width: 768px) {
+    h2 {
+      font-size: 48px;
+      font-size: 3rem; } }
+  @media (min-width: 1000px) {
+    h2 {
+      font-size: 54px;
+      font-size: 3.375rem; } }
+
+.registeration-button {
+  padding: 35px 0; }
+
+.btn {
+  font-family: 'avenir-heavy', 'Arial', sans-serif;
+  font-size: 18px;
+  font-size: 1.125rem;
+  position: relative;
+  display: block;
+  background-color: #e03c31;
+  color: #ffffff;
+  padding: 20px 10px;
+  width: 100%;
+  max-width: 280px;
+  margin: 0 auto;
+  text-align: center; }
+  .btn::after {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -5px;
+    border-color: transparent;
+    border-style: solid;
+    border-width: 30px;
+    border-left-color: #ffffff;
+    border-top-color: #ffffff;
+    transform: rotate(8deg); }
+  @media (min-width: 768px) {
+    .btn {
+      max-width: 585px; } }
+  .btn:hover {
+    text-decoration: none;
+    background-color: #071d49; }
+
+body {
+  font-family: 'avenir', 'Arial', sans-serif;
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: #000000; }
+  @media (min-width: 1000px) {
+    body {
+      font-size: 24px;
+      font-size: 1.5rem; } }
+
+h2 {
+  font-family: 'avenir-heavy', 'Arial', sans-serif;
+  font-size: 28px;
+  font-size: 1.75rem;
+  color: #071d49;
+  text-transform: uppercase; }
+  @media (min-width: 768px) {
+    h2 {
+      font-size: 48px;
+      font-size: 3rem; } }
+  @media (min-width: 1000px) {
+    h2 {
+      font-size: 54px;
+      font-size: 3.375rem; } }
+
+.call-to-action__content {
+  line-height: 1.5; }
+
+body {
+  font-family: 'avenir', 'Arial', sans-serif;
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: #000000; }
+  @media (min-width: 1000px) {
+    body {
+      font-size: 24px;
+      font-size: 1.5rem; } }
+
+h2 {
+  font-family: 'avenir-heavy', 'Arial', sans-serif;
+  font-size: 28px;
+  font-size: 1.75rem;
+  color: #071d49;
+  text-transform: uppercase; }
+  @media (min-width: 768px) {
+    h2 {
+      font-size: 48px;
+      font-size: 3rem; } }
+  @media (min-width: 1000px) {
+    h2 {
+      font-size: 54px;
+      font-size: 3.375rem; } }
+
+.faq-set__question {
+  font-family: 'avenir-heavy', 'Arial', sans-serif;
+  font-size: 18px;
+  font-size: 1.125rem;
+  position: relative;
+  color: #e03c31;
+  border-top: 2px solid #071d49;
+  padding: 18px 0; }
+  @media (min-width: 768px) {
+    .faq-set__question {
+      font-size: 24px;
+      font-size: 1.5rem; } }
+  .faq-set__question::before {
+    position: absolute;
+    right: 275px;
+    content: '';
+    height: 2px;
+    width: 100%;
+    background-color: #071d49;
+    top: -2px; }
+
+.faq-set__answer.open {
+  padding-bottom: 20px; }
+
+body {
+  font-family: 'avenir', 'Arial', sans-serif;
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: #000000; }
+  @media (min-width: 1000px) {
+    body {
+      font-size: 24px;
+      font-size: 1.5rem; } }
+
+h2 {
+  font-family: 'avenir-heavy', 'Arial', sans-serif;
+  font-size: 28px;
+  font-size: 1.75rem;
+  color: #071d49;
+  text-transform: uppercase; }
+  @media (min-width: 768px) {
+    h2 {
+      font-size: 48px;
+      font-size: 3rem; } }
+  @media (min-width: 1000px) {
+    h2 {
+      font-size: 54px;
+      font-size: 3.375rem; } }
+
+.footer {
+  font-size: 18px;
+  font-size: 1.125rem;
+  background-image: url("../assets/pattern-blue.png");
+  padding: 45px 20px 100px; }
+  @media (min-width: 1000px) {
+    .footer {
+      padding-bottom: 45px; } }
+
+@media (min-width: 1000px) {
+  .footer__top {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between; } }
+
+@media (min-width: 1000px) {
+  .footer__top .footer__branding {
+    width: 50%; } }
+
+.footer__top .footer__links {
+  padding-top: 25px; }
+  @media (min-width: 1000px) {
+    .footer__top .footer__links {
+      padding-top: 0;
+      width: 50%;
+      display: -ms-flexbox;
+      display: flex; } }
+
+.footer-logo {
+  max-width: 280px;
+  margin: 0 auto;
+  width: 100%;
+  display: block; }
+  @media (min-width: 1000px) {
+    .footer-logo {
+      margin-left: 0; } }
+
+.footer__app-links {
+  padding-top: 48px; }
+  .footer__app-links .app-links__header {
+    font-family: 'avenir-heavy', 'Arial', sans-serif;
+    font-size: 18px;
+    font-size: 1.125rem;
+    display: block;
+    color: #BCBCBC;
+    padding-bottom: 10px; }
+  .footer__app-links .app-links--img {
+    max-width: 180px;
+    display: block;
+    padding-bottom: 15px; }
+
+@media (min-width: 1000px) {
+  .footer__menus {
+    width: 50%; } }
+
+.footer__menus li {
+  font-family: 'avenir-heavy', 'Arial', sans-serif;
+  text-transform: uppercase; }
+  .footer__menus li li {
+    font-family: 'avenir-book', 'Arial', sans-serif;
+    text-transform: none;
+    padding-top: 5px; }
+
+.footer__menus a {
+  color: #ffffff; }
+
+.footer__menus .main-menu {
+  padding-top: 30px; }
+  .footer__menus .main-menu li {
+    padding-bottom: 6px; }
+
+.footer__social {
+  padding-top: 25px; }
+  @media (min-width: 1000px) {
+    .footer__social {
+      padding-top: 0;
+      width: 50%; } }
+  .footer__social a {
+    width: 45px;
+    height: 45px;
+    display: block;
+    float: left;
+    margin-right: 15px;
+    background-image: url("../assets/social-sprite.svg");
+    background-size: cover; }
+    .footer__social a.twitter {
+      background-position: 0 0; }
+    .footer__social a.linkedin {
+      background-position: -60px 0; }
+    .footer__social a.facebook {
+      background-position: -123px 0; }
+
+.footer__copyright {
+  display: inline-block;
+  width: 100%;
+  border-top: 2px dotted #ffffff;
+  margin-top: 35px;
+  padding-top: 20px; }
+  @media (min-width: 1000px) {
+    .footer__copyright {
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-pack: justify;
+      justify-content: space-between; } }
+  .footer__copyright a {
+    font-family: 'avenir-heavy', 'Arial', sans-serif;
+    color: #ffffff; }
+  .footer__copyright p {
+    font-family: 'avenir-book', 'Arial', sans-serif;
+    font-size: 12px;
+    font-size: 0.75rem;
+    line-height: 1.2;
+    padding-top: 21px;
+    color: #ffffff; }
+    @media (min-width: 1000px) {
+      .footer__copyright p {
+        font-size: 18px;
+        font-size: 1.125rem;
+        padding-top: 0; } }
+
+body {
+  font-family: 'avenir', 'Arial', sans-serif;
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: #000000; }
+  @media (min-width: 1000px) {
+    body {
+      font-size: 24px;
+      font-size: 1.5rem; } }
+
+h2 {
+  font-family: 'avenir-heavy', 'Arial', sans-serif;
+  font-size: 28px;
+  font-size: 1.75rem;
+  color: #071d49;
+  text-transform: uppercase; }
+  @media (min-width: 768px) {
+    h2 {
+      font-size: 48px;
+      font-size: 3rem; } }
+  @media (min-width: 1000px) {
+    h2 {
+      font-size: 54px;
+      font-size: 3.375rem; } }
+
+@media (min-width: 768px) {
+  .header {
+    width: 90%;
+    max-width: 1600px;
+    margin: 0 auto;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between; } }
+
+.momentum-logo {
+  width: 150px;
+  margin: 0 auto; }
+  @media (min-width: 768px) {
+    .momentum-logo {
+      margin: 0;
+      width: 350px; } }
+  @media (min-width: 1000px) {
+    .momentum-logo {
+      width: 400px; } }
+
+.header__navigation {
+  width: 100%;
+  padding: 0 15px; }
+  .header__navigation .menu {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between; }
+    @media (min-width: 768px) {
+      .header__navigation .menu {
+        -ms-flex-pack: end;
+        justify-content: flex-end; } }
+  .header__navigation li {
+    text-align: center;
+    position: relative; }
+    @media (min-width: 768px) {
+      .header__navigation li {
+        margin-left: 20px; } }
+    .header__navigation li a {
+      font-family: 'avenir-heavy', 'Arial', sans-serif;
+      font-size: 14px;
+      font-size: 0.875rem;
+      display: block;
+      color: #071d49;
+      line-height: 2;
+      padding-left: 15px; }
+      .header__navigation li a::before {
+        background-image: url("../assets/nav-slash.svg");
+        background-position: left;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        content: '';
+        position: absolute;
+        top: 6px;
+        left: 0;
+        width: 12px;
+        height: 12px; }
+    .header__navigation li.register {
+      background-color: #e03c31; }
+      .header__navigation li.register::after {
+        content: '';
+        position: absolute;
+        top: -10px;
+        left: -5px;
+        border-color: transparent;
+        border-style: solid;
+        border-width: 30px;
+        border-left-color: #ffffff;
+        border-top-color: #ffffff;
+        transform: rotate(8deg); }
+      .header__navigation li.register a {
+        color: #ffffff;
+        padding: 0 5px 0 15px; }
+        .header__navigation li.register a::before {
+          display: none; }
+  .header__navigation li ul {
+    display: none; }
+
+body {
+  font-family: 'avenir', 'Arial', sans-serif;
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: #000000; }
+  @media (min-width: 1000px) {
+    body {
+      font-size: 24px;
+      font-size: 1.5rem; } }
+
+h2 {
+  font-family: 'avenir-heavy', 'Arial', sans-serif;
+  font-size: 28px;
+  font-size: 1.75rem;
+  color: #071d49;
+  text-transform: uppercase; }
+  @media (min-width: 768px) {
+    h2 {
+      font-size: 48px;
+      font-size: 3rem; } }
+  @media (min-width: 1000px) {
+    h2 {
+      font-size: 54px;
+      font-size: 3.375rem; } }
+
+.icon-breaker__wrapper {
+  text-align: center; }
+  @media (min-width: 768px) {
+    .icon-breaker__wrapper .icon-breaker__items {
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-pack: justify;
+      justify-content: space-between; } }
+  .icon-breaker__wrapper .icon-breaker__item {
+    font-family: 'avenir-heavy', 'Arial', sans-serif;
+    font-size: 18px;
+    font-size: 1.125rem;
+    color: #071d49;
+    text-align: center;
+    margin-bottom: 2rem; }
+    .icon-breaker__wrapper .icon-breaker__item img {
+      max-width: 120px; }
+    .icon-breaker__wrapper .icon-breaker__item .icon-breaker__item-content {
+      padding: 0 20px; }
+      @media (min-width: 768px) {
+        .icon-breaker__wrapper .icon-breaker__item .icon-breaker__item-content {
+          font-size: 22px;
+          font-size: 1.375rem; } }
+      @media (min-width: 1000px) {
+        .icon-breaker__wrapper .icon-breaker__item .icon-breaker__item-content {
+          font-size: 28px;
+          font-size: 1.75rem; } }
+
+body {
+  font-family: 'avenir', 'Arial', sans-serif;
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: #000000; }
+  @media (min-width: 1000px) {
+    body {
+      font-size: 24px;
+      font-size: 1.5rem; } }
+
+h2 {
+  font-family: 'avenir-heavy', 'Arial', sans-serif;
+  font-size: 28px;
+  font-size: 1.75rem;
+  color: #071d49;
+  text-transform: uppercase; }
+  @media (min-width: 768px) {
+    h2 {
+      font-size: 48px;
+      font-size: 3rem; } }
+  @media (min-width: 1000px) {
+    h2 {
+      font-size: 54px;
+      font-size: 3.375rem; } }
+
+a.external {
+  position: relative;
+  padding-right: 35px; }
+  a.external::after {
+    content: '';
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background-image: url("../assets/icon-external-link.svg"); }
+
+body {
+  font-family: 'avenir', 'Arial', sans-serif;
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: #000000; }
+  @media (min-width: 1000px) {
+    body {
+      font-size: 24px;
+      font-size: 1.5rem; } }
+
+h2 {
+  font-family: 'avenir-heavy', 'Arial', sans-serif;
+  font-size: 28px;
+  font-size: 1.75rem;
+  color: #071d49;
+  text-transform: uppercase; }
+  @media (min-width: 768px) {
+    h2 {
+      font-size: 48px;
+      font-size: 3rem; } }
+  @media (min-width: 1000px) {
+    h2 {
+      font-size: 54px;
+      font-size: 3.375rem; } }
+
+.section-wrapper {
+  position: relative;
+  padding: 0 50px 32px 10px;
+  margin: 0 auto; }
+  @media (min-width: 768px) {
+    .section-wrapper {
+      padding: 0 150px 60px 10px; } }
+  @media (min-width: 1280px) {
+    .section-wrapper {
+      padding: 0 0 70px; } }
+  .section-wrapper::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 60px;
+    height: 62px;
+    background-image: url("../assets/double.svg");
+    background-size: cover; }
+    @media (min-width: 768px) {
+      .section-wrapper::after {
+        width: 155px;
+        height: 150px; } }
+  .section-wrapper::before {
+    content: '';
+    position: absolute;
+    bottom: 62px;
+    top: 0;
+    right: 0;
+    width: 30px;
+    background-image: url("../assets/single.svg");
+    background-repeat: repeat-y;
+    background-position: bottom; }
+    @media (min-width: 768px) {
+      .section-wrapper::before {
+        width: 70px;
+        bottom: 150px; } }
+  .section-wrapper .section-content {
+    max-width: 1260px;
+    margin: 0 auto; }
+  .section-wrapper.bg-aqua {
+    background-color: #77c5d5; }
+  .section-wrapper.edge-lav::after {
+    background-image: url("../assets/double-lav.svg"); }
+  .section-wrapper.edge-lav::before {
+    background-image: url("../assets/single-lav.svg"); }
+  .section-wrapper.edge-red::after {
+    background-image: url("../assets/double-red.svg"); }
+  .section-wrapper.edge-red::before {
+    background-image: url("../assets/single-red.svg"); }
+
+body {
+  font-family: 'avenir', 'Arial', sans-serif;
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: #000000; }
+  @media (min-width: 1000px) {
+    body {
+      font-size: 24px;
+      font-size: 1.5rem; } }
+
+h2 {
+  font-family: 'avenir-heavy', 'Arial', sans-serif;
+  font-size: 28px;
+  font-size: 1.75rem;
+  color: #071d49;
+  text-transform: uppercase; }
+  @media (min-width: 768px) {
+    h2 {
+      font-size: 48px;
+      font-size: 3rem; } }
+  @media (min-width: 1000px) {
+    h2 {
+      font-size: 54px;
+      font-size: 3.375rem; } }
+
+.section-title {
+  padding: 30px 0 25px; }
+  @media (min-width: 768px) {
+    .section-title {
+      text-align: center;
+      padding: 80px 0 65px; } }
+  .section-title .section-title__content {
+    padding-top: 2rem; }
+
+body {
+  font-family: 'avenir', 'Arial', sans-serif;
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: #000000; }
+  @media (min-width: 1000px) {
+    body {
+      font-size: 24px;
+      font-size: 1.5rem; } }
+
+h2 {
+  font-family: 'avenir-heavy', 'Arial', sans-serif;
+  font-size: 28px;
+  font-size: 1.75rem;
+  color: #071d49;
+  text-transform: uppercase; }
+  @media (min-width: 768px) {
+    h2 {
+      font-size: 48px;
+      font-size: 3rem; } }
+  @media (min-width: 1000px) {
+    h2 {
+      font-size: 54px;
+      font-size: 3.375rem; } }
+
+body {
+  font-family: 'avenir', 'Arial', sans-serif;
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: #000000; }
+  @media (min-width: 1000px) {
+    body {
+      font-size: 24px;
+      font-size: 1.5rem; } }
+
+h2 {
+  font-family: 'avenir-heavy', 'Arial', sans-serif;
+  font-size: 28px;
+  font-size: 1.75rem;
+  color: #071d49;
+  text-transform: uppercase; }
+  @media (min-width: 768px) {
+    h2 {
+      font-size: 48px;
+      font-size: 3rem; } }
+  @media (min-width: 1000px) {
+    h2 {
+      font-size: 54px;
+      font-size: 3.375rem; } }
+
+.speaker-wrapper {
+  background-color: #77c5d5; }
+
+.speaker__collection-header {
+  width: 100%;
+  display: inline-block;
+  background-color: #6F7BD4;
+  margin-bottom: 20px;
+  margin-left: -20px; }
+  @media (min-width: 768px) {
+    .speaker__collection-header {
+      width: 75%; } }
+  .speaker__collection-header .speaker__collection-title {
+    font-family: 'avenir-heavy', 'Arial', sans-serif;
+    font-size: 24px;
+    font-size: 1.5rem;
+    color: #ffffff;
+    text-transform: uppercase;
+    padding-left: 40px; }
+    @media (min-width: 768px) {
+      .speaker__collection-header .speaker__collection-title {
+        float: right;
+        padding-right: 25%; } }
+
+@media (min-width: 768px) {
+  .speaker__items {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    margin-top: 20px; } }
+
+.speaker__item {
+  position: relative;
+  width: 100%;
+  max-width: 242px;
+  margin: 0 auto 30px; }
+  @media (min-width: 768px) {
+    .speaker__item {
+      width: 49.5%;
+      max-width: none; } }
+  @media (min-width: 1000px) {
+    .speaker__item {
+      display: inline-block;
+      margin: 0 0 30px;
+      max-width: 465px; } }
+  @media (min-width: 1000px) {
+    .speaker__item {
+      max-width: none; } }
+  .speaker__item .speaker__image::after {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -5px;
+    border-color: transparent;
+    border-style: solid;
+    border-width: 30px;
+    border-left-color: #77c5d5;
+    border-top-color: #77c5d5;
+    transform: rotate(8deg); }
+  @media (min-width: 768px) {
+    .speaker__item .speaker__image {
+      max-width: 230px;
+      margin-right: 13px; } }
+  @media (min-width: 1000px) {
+    .speaker__item .speaker__image {
+      max-width: 280px;
+      float: left; } }
+  .speaker__item .speaker__name {
+    font-family: 'avenir-heavy', 'Arial', sans-serif;
+    font-size: 24px;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    color: #e03c31; }
+    @media (min-width: 768px) {
+      .speaker__item .speaker__name {
+        padding-top: 10px; } }
+  .speaker__item .speaker__title,
+  .speaker__item .speaker__company {
+    font-size: 18px;
+    font-size: 1.125rem;
+    color: #000000; }
+
+body {
+  font-family: 'avenir', 'Arial', sans-serif;
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: #000000; }
+  @media (min-width: 1000px) {
+    body {
+      font-size: 24px;
+      font-size: 1.5rem; } }
+
+h2 {
+  font-family: 'avenir-heavy', 'Arial', sans-serif;
+  font-size: 28px;
+  font-size: 1.75rem;
+  color: #071d49;
+  text-transform: uppercase; }
+  @media (min-width: 768px) {
+    h2 {
+      font-size: 48px;
+      font-size: 3rem; } }
+  @media (min-width: 1000px) {
+    h2 {
+      font-size: 54px;
+      font-size: 3.375rem; } }
+
+@media (min-width: 768px) {
+  .sponsors__items {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -ms-flex-pack: distribute;
+    justify-content: space-around; } }
+
+.sponsors__items .sponsors__item {
+  text-align: center; }
+  @media (min-width: 768px) {
+    .sponsors__items .sponsors__item {
+      display: inline-block;
+      width: 30%; } }

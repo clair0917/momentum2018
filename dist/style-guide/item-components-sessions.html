@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Style Guide</title>
+
+  <meta name="description" content="">
+  <meta name="generator" content="kss-node">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <link rel="stylesheet" href="kss-assets/kss.css">
+  <link rel="stylesheet" href="../all/all.css">
+
+</head>
+<body id="kss-node">
+  <div class="kss-wrapper">
+
+    <div class="kss-sidebar">
+      <div class="kss-sidebar-inner">
+        <header class="kss-header">
+          <h1 class="kss-doc-title">Style Guide</h1>
+        </header>
+        <nav class="kss-nav">
+          <ul class="kss-menu">
+            <li class="kss-menu-item"><a href="./"><span class="kss-ref">0</span><span class="kss-name">Overview</span></a></li>
+                          <li class="kss-menu-item">
+                <a href="section-components.html"><span class="kss-ref">1</span><span class="kss-name">Components</span></a>
+                              </li>
+                          <li class="kss-menu-item">
+                <a href="section-icons.html"><span class="kss-ref">2</span><span class="kss-name">Icons</span></a>
+                              </li>
+                          <li class="kss-menu-item">
+                <a href="section-colors.html"><span class="kss-ref">3</span><span class="kss-name">Colors</span></a>
+                              </li>
+                          <li class="kss-menu-item">
+                <a href="section-type.html"><span class="kss-ref">4</span><span class="kss-name">Type</span></a>
+                              </li>
+                        <li><button class="kss-menu-full-width js-full-width" title="Remove navigation and padding to show what a component looks like at full page width.">Remove Navigation</button></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <div class="kss-content">
+      <article role="main" class="kss-article">
+      
+        
+                            <div id="kssref-components-sessions" class="kss-section kss-depth-2">
+            <div class="kss-style">
+                            <h2 class="kss-title kss-title--level-2">
+                <a class="kss-title__permalink" href="#kssref-components-sessions">
+                  Sessions
+                </a>
+              </h2>
+
+                              <div class="kss-description">
+                  <p>This is the sessions section</p>
+
+                </div>
+              
+                          </div>
+
+                          <div class="kss-modifier-block">
+
+                <div class="kss-modifier kss-modifier-original">
+                  <div class="kss-modifier-example">
+                    <div class="sessions section-wrapper edge-lav">
+  
+<div class="section-title">
+  <h2>Momentum Sessions</h2>
+
+  
+</div>  <div class="sessions-filters-wrapper">
+    <div class="section-content">
+      <div class="filter-title">
+        Explore Momentum
+      </div>
+      <div class="filter-content">
+        Filter Momentum Sessions
+      </div>
+      <select id="session-filters" name="sessions-select">
+        <option value="Sessions" selected>Choose Session</option>
+        <option value="Session1">Value 1</option>
+        <option value="Session2">Value 2</option>
+        <option value="Session3">Value 3</option>
+      </select>
+    </div>
+  </div>
+  <div class="sessions__items">
+        <div class="sessions__item">
+      <div class="sessions__date-time-wrapper">
+        <div class="sessions__date-time section-content">
+          <span class="session-date">Monday, May 21, 2017 </span>
+          <span class="session-time">10:00AM to 8:00PM</span>
+        </div>
+      </div>
+      <div class="sessions__content section-content">
+        <div class="session__title"><a href="#">Extended Enterprise Managment</a></div>
+        <div class="session__speakers">
+          <div class="sessions__content-label">Speakers(s)</div>
+          <a href="#">Clair Smith</a>
+        </div>
+        <div class="session__track">
+          <div class="sessions__content-label">Track(s)</div>
+          <a href="#"></a>
+        </div>
+        <div class="session__location">
+          <div class="sessions__content-label">Location</div>
+          <span class="session-location">Milano Room 1</span>
+        </div>
+      </div>
+    </div>
+      </div>
+</div>
+                  </div>
+                </div>
+
+                                                <div class="kss-markup">
+                  <button class="js-show-markup">Show Markup Example</button>
+                  <template>
+                    <pre><code data-language="html">&lt;div class=&quot;sessions section-wrapper edge-lav&quot;&gt;
+  {%
+    include &#039;../section-title/section-title.twig&#039; with {
+    &#039;title&#039; : section_title
+    } only
+  %}
+  &lt;div class=&quot;sessions-filters-wrapper&quot;&gt;
+    &lt;div class=&quot;section-content&quot;&gt;
+      &lt;div class=&quot;filter-title&quot;&gt;
+        {{ filter_title }}
+      &lt;/div&gt;
+      &lt;div class=&quot;filter-content&quot;&gt;
+        {{ filter_content }}
+      &lt;/div&gt;
+      &lt;select id=&quot;session-filters&quot; name=&quot;sessions-select&quot;&gt;
+        &lt;option value=&quot;Sessions&quot; selected&gt;Choose Session&lt;/option&gt;
+        &lt;option value=&quot;Session1&quot;&gt;Value 1&lt;/option&gt;
+        &lt;option value=&quot;Session2&quot;&gt;Value 2&lt;/option&gt;
+        &lt;option value=&quot;Session3&quot;&gt;Value 3&lt;/option&gt;
+      &lt;/select&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;sessions__items&quot;&gt;
+    {% for item in sessions %}
+    &lt;div class=&quot;sessions__item&quot;&gt;
+      &lt;div class=&quot;sessions__date-time-wrapper&quot;&gt;
+        &lt;div class=&quot;sessions__date-time section-content&quot;&gt;
+          &lt;span class=&quot;session-date&quot;&gt;{{ item.session_date }}&lt;/span&gt;
+          &lt;span class=&quot;session-time&quot;&gt;{{ item.session_time }}&lt;/span&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;sessions__content section-content&quot;&gt;
+        &lt;div class=&quot;session__title&quot;&gt;&lt;a href=&quot;{{ item.session_link }}&quot;&gt;{{ item.session_title }}&lt;/a&gt;&lt;/div&gt;
+        &lt;div class=&quot;session__speakers&quot;&gt;
+          &lt;div class=&quot;sessions__content-label&quot;&gt;Speakers(s)&lt;/div&gt;
+          &lt;a href=&quot;{{ item.speaker_link }}&quot;&gt;{{ item.session_speaker }}&lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;session__track&quot;&gt;
+          &lt;div class=&quot;sessions__content-label&quot;&gt;Track(s)&lt;/div&gt;
+          &lt;a href=&quot;{{ item.track_link }}&quot;&gt;{{ item.session_track }}&lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;session__location&quot;&gt;
+          &lt;div class=&quot;sessions__content-label&quot;&gt;Location&lt;/div&gt;
+          &lt;span class=&quot;session-location&quot;&gt;{{ item.session_location }}&lt;/span&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    {% endfor %}
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                  </template>
+                </div>
+                              </div>
+
+                                    </div>
+                    </article>
+    </div>
+</div>
+
+<!-- SCRIPTS -->
+<!-- Fake drupalSettings -->
+<script type="application/json" data-drupal-selector="drupal-settings-json">
+  {}
+</script>
+<!-- / Fake drupalSettings
+<script src="/core/assets/vendor/jquery/jquery.min.js"></script>
+<script src="/core/assets/vendor/jquery-once/jquery.once.min.js"></script>
+<script src="/core/assets/vendor/domready/ready.min.js"></script>
+<script src="/core/misc/drupalSettingsLoader.js"></script>
+<script src="/core/misc/drupal.js"></script> -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="kss-assets/kss.js"></script>
+<script src="kss-assets/rainbow.min.js"></script>
+<script src="kss-assets/main.js"></script>
+
+<script src="../js/accordions.js"></script>
+<script src="../js/sessions.js"></script>
+
+
+<!-- Automatically built using <a href="https://github.com/kss-node/kss-node">kss-node</a>. -->
+</body>
+</html>

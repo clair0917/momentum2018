@@ -1,0 +1,34 @@
+<div class="agenda section-wrapper">
+  {%
+    include '../section-title/section-title.twig' with {
+    'title' : section_title
+    } only
+  %}
+
+  {% for item in agenda_by_day %}
+   <div class="agenda-by-day section-content">
+     <div class="agenda-by-day__header">
+       <span class="agenda-by-day__dow">
+        {{ item.agenda_dow }}
+       </span>
+       <span class="agenda-by-day__date">
+         {{ item.agenda_date }}
+       </span>
+     </div>
+
+     <div class="agenda-by-day__items">
+       <ul>
+        {% for item in item.agenda_events %}
+         <li class="agenda-by-day__item {{ item.type }}">
+          <div class="agenda-by-day__item-icon">{{ item.icon }}</div>
+           <div class="agenda-by-day__item-content-wrapper">
+              <div class="agenda-by-day__item-time">{{ item.time }}</div>
+              <div class="agenda-by-day__item-content">{{ item.content }}</div>
+           </div>
+         </li>
+         {% endfor %}
+       </ul>
+     </div>
+   </div>
+  {% endfor %}
+</div>

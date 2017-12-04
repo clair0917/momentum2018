@@ -1,0 +1,67 @@
+// Colors
+//
+// All Sass color variables prefixed with $color-.
+// This makes it easy to figure out what a variable
+// is for later.
+//
+// Markup:
+// <h3>Brand Colors</h3>
+// <div class="kss-swatch" style="background-color: #071d49">
+//   <div class="kss-swatch__hex">$color-ma-dark-blue<br>#071d49</div>
+// </div>
+// <div class="kss-swatch" style="background-color: #2C5697">
+//   <div class="kss-swatch__hex">$color-ma-lite-blue<br>#2C5697</div>
+// </div>
+// <div class="kss-swatch" style="background-color: #77c5d5">
+//   <div class="kss-swatch__hex">$color-ma-aqua<br>#77c5d5</div>
+// </div>
+// <div class="kss-swatch" style="background-color: #6F7BD4">
+//   <div class="kss-swatch__hex">$color-ma-lavender<br>#6F7BD4</div>
+// </div>
+// <div class="kss-swatch" style="background-color: #e03c31">
+//   <div class="kss-swatch__hex">$color-ma-orange<br>#e03c31</div>
+// </div>
+// <br />
+// <hr />
+// <br />
+// <h3>Brand Grays</h3>
+// <div class="kss-swatch" style="background-color: #d9d9d6">
+//   <div class="kss-swatch__hex">$color-ma-lite-gray<br>#d9d9d6</div>
+// </div>
+// <div class="kss-swatch" style="background-color: #BCBCBC">
+//   <div class="kss-swatch__hex">$color-ma-medium-gray<br>#BCBCBC</div>
+// </div>
+// <div class="kss-swatch" style="background-color: #767676">
+//   <div class="kss-swatch__hex">$color-ma-gray<br>#767676</div>
+// </div>
+// <div class="kss-swatch" style="background-color: #535353">
+//   <div class="kss-swatch__hex">$color-ma-dark-gray<br>#535353</div>
+// </div>
+// <br />
+// <hr />
+// <br />
+// <h3>Common</h3>
+// <div class="kss-swatch" style="background-color: #000">
+//   <div class="kss-swatch__hex">$color-black<br>#000</div>
+// </div>
+// <div class="kss-swatch" style="background-color: #fff">
+//   <div class="kss-swatch__hex">$color-white<br>#fff</div>
+// </div>
+//
+// Weight: 999
+//
+// Style guide: colors
+
+$color-ma-dark-blue: #071d49;
+$color-ma-lite-blue: #2C5697;
+$color-ma-aqua: #77c5d5;
+$color-ma-lavender: #6F7BD4;
+$color-ma-orange: #e03c31;
+$color-ma-links: #2b5798;
+
+$color-ma-lite-gray: #d9d9d6;
+$color-ma-medium-gray: #BCBCBC;
+$color-ma-gray: #767676;
+$color-ma-dark-gray: #535353;
+$color-black: #000000;
+$color-white: #ffffff;

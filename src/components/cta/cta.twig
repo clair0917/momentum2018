@@ -1,0 +1,23 @@
+{{ attach_library('momentum2018/cta') }}
+<div class="call-to-action section-wrapper edge-red">
+  <div class="section-content">
+    {%
+      include '../section-title/section-title.twig' with {
+        'title' : section_title,
+        'content' : content
+    } only
+    %}
+
+    {% if button.link %}
+      {%
+          include '../buttons/buttons.twig' with {
+            'class' : button.class,
+            'text' : button.text,
+            'link' : button.link
+        } only
+      %}
+    {% endif %}
+
+
+  </div>
+</div>

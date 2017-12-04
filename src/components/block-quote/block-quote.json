@@ -1,0 +1,21 @@
+{
+  "section_title": "<h2>What are people saying about momentum?</h2>",
+  "quotes": [
+    {
+      "content": "Interaction with others using the Manhattan products is one of the key motivators to attend.",
+      "author": "Victor Callaway",
+      "company": {
+        "name": "Jockey International Inc.",
+        "logo": "../assets/jockey.png"
+      }
+    },
+    {
+      "content": "Loved the app as it is easier to manage everything, take notes and have all the contacts in one place.",
+      "author": "Jon Hain",
+      "company": {
+        "name": "Big Lots Stores, Inc.",
+        "logo": "../assets/bigLots.png"
+      }
+    }
+  ]
+}

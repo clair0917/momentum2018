@@ -1,0 +1,25 @@
+{
+  "items":[
+    {
+      "icon": "facebook"
+    },
+    {
+      "icon": "twitter"
+    },
+    {
+      "icon": "youtube"
+    },
+    {
+      "icon": "pinterest"
+    },
+    {
+      "icon": "instagram"
+    },
+    {
+      "icon": "icon-external-link"
+    },
+    {
+      "icon": "icon-quote"
+    }
+  ]
+}

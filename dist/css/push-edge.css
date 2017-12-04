@@ -1,0 +1,76 @@
+body {
+  font-family: 'avenir', 'Arial', sans-serif;
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: #000000; }
+  @media (min-width: 1000px) {
+    body {
+      font-size: 24px;
+      font-size: 1.5rem; } }
+
+h2 {
+  font-family: 'avenir-heavy', 'Arial', sans-serif;
+  font-size: 28px;
+  font-size: 1.75rem;
+  color: #071d49;
+  text-transform: uppercase; }
+  @media (min-width: 768px) {
+    h2 {
+      font-size: 48px;
+      font-size: 3rem; } }
+  @media (min-width: 1000px) {
+    h2 {
+      font-size: 54px;
+      font-size: 3.375rem; } }
+
+.section-wrapper {
+  position: relative;
+  padding: 0 50px 32px 10px;
+  margin: 0 auto; }
+  @media (min-width: 768px) {
+    .section-wrapper {
+      padding: 0 150px 60px 10px; } }
+  @media (min-width: 1280px) {
+    .section-wrapper {
+      padding: 0 0 70px; } }
+  .section-wrapper::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 60px;
+    height: 62px;
+    background-image: url("../assets/double.svg");
+    background-size: cover; }
+    @media (min-width: 768px) {
+      .section-wrapper::after {
+        width: 155px;
+        height: 150px; } }
+  .section-wrapper::before {
+    content: '';
+    position: absolute;
+    bottom: 62px;
+    top: 0;
+    right: 0;
+    width: 30px;
+    background-image: url("../assets/single.svg");
+    background-repeat: repeat-y;
+    background-position: bottom; }
+    @media (min-width: 768px) {
+      .section-wrapper::before {
+        width: 70px;
+        bottom: 150px; } }
+  .section-wrapper .section-content {
+    max-width: 1260px;
+    margin: 0 auto; }
+  .section-wrapper.bg-aqua {
+    background-color: #77c5d5; }
+  .section-wrapper.edge-lav::after {
+    background-image: url("../assets/double-lav.svg"); }
+  .section-wrapper.edge-lav::before {
+    background-image: url("../assets/single-lav.svg"); }
+  .section-wrapper.edge-red::after {
+    background-image: url("../assets/double-red.svg"); }
+  .section-wrapper.edge-red::before {
+    background-image: url("../assets/single-red.svg"); }

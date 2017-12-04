@@ -1,0 +1,17 @@
+{
+  "section_title": "<h2>Why Attend Momentum 2018?</h2>",
+  "items": [
+    {
+      "image": "../assets/breaker-image1.png",
+      "content": "<div>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.</div>"
+    },
+    {
+      "image": "../assets/breaker-image2.png",
+      "content": "<div>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.</div>"
+    },
+    {
+      "image": "../assets/breaker-image3.png",
+      "content": "<div>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.</div>"
+    }
+  ]
+}

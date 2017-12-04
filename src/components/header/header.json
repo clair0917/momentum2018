@@ -1,0 +1,90 @@
+{
+  "logo": "../assets/fullcolor-logo.svg",
+  "menu_items": [
+    {
+      "link": "/agenda",
+      "text": "Agenda",
+      "submenu_items": [
+        {
+          "link": "#",
+          "text": "Overview"
+        },
+        {
+          "link": "#",
+          "text": "Sessions"
+        },
+        {
+          "link": "#",
+          "text": "Track Description"
+        },
+        {
+          "link": "#",
+          "text": "Speakers"
+        }
+      ]
+    },
+    {
+      "link": "/news",
+      "text": "News"
+    },
+    {
+      "link": "/details",
+      "text": "Details",
+      "submenu_items": [
+        {
+          "link": "#",
+          "text": "Venue"
+        },
+        {
+          "link": "#",
+          "text": "Lodging"
+        },
+        {
+          "link": "#",
+          "text": "Travel"
+        },
+        {
+          "link": "#",
+          "text": "FAQ"
+        },
+        {
+          "link": "#",
+          "text": "Directions"
+        },
+        {
+          "link": "#",
+          "text": "Supply Chain Leaders"
+        },
+        {
+          "link": "#",
+          "text": "Sponsors"
+        },
+        {
+          "link": "#",
+          "text": "Discounts"
+        },
+        {
+          "link": "#",
+          "text": "About Holywood, FL"
+        },
+        {
+          "link": "#",
+          "text": "Attendee Benefits"
+        },
+        {
+          "link": "#",
+          "text": "Gallery"
+        },
+        {
+          "link": "#",
+          "text": "Discovery Center"
+        }
+      ]
+    },
+    {
+      "link": "/register",
+      "text": "Register",
+      "class": "register"
+    }
+  ]
+}

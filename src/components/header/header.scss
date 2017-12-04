@@ -1,0 +1,97 @@
+// Header
+//
+// This is the global site header
+//
+// Markup: header.twig
+//
+// Style guide: Components.header
+
+// Import site utilities.
+@import '../../global/utils/init';
+
+.header {
+
+  @include breakpoint ($bp-sm) {
+    width: 90%;
+    max-width: 1600px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.momentum-logo {
+  width: 150px;
+  margin: 0 auto;
+
+  @include breakpoint ($bp-sm) {
+    margin: 0;
+    width: 350px;
+  }
+
+  @include breakpoint ($bp-md) {
+    width: 400px;
+  }
+}
+
+.header__navigation {
+  width: 100%;
+  padding: 0 15px;
+
+  .menu {
+    display: flex;
+    justify-content: space-between;
+
+    @include breakpoint ($bp-sm) {
+      justify-content: flex-end;
+    }
+  }
+
+  li {
+    text-align: center;
+    position: relative;
+
+    @include breakpoint ($bp-sm) {
+      margin-left: 20px;
+    }
+
+    a {
+      @include font-stack-heavy;
+      @include fontsize(14);
+      display: block;
+      color: $color-ma-dark-blue;
+      line-height: 2;
+      padding-left: 15px;
+
+      &::before {
+        @include background('../assets/nav-slash.svg', left, 100%);
+        content: '';
+        position: absolute;
+        top: 6px;
+        left: 0;
+        width: 12px;
+        height: 12px;
+
+      }
+    }
+
+    &.register {
+      @include cut-corner-white;
+
+      background-color: $color-ma-orange;
+
+      a {
+        color: $color-white;
+        padding: 0 5px 0 15px;
+
+        &::before {
+          display: none;
+        }
+      }
+    }
+  }
+
+  li ul {
+    display: none;
+  }
+}

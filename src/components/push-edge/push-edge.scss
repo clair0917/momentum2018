@@ -1,0 +1,80 @@
+// Import site utilities.
+@import '../../global/utils/init';
+
+.section-wrapper {
+  position: relative;
+  padding: 0 50px 32px 10px;
+  margin: 0 auto;
+
+  @include breakpoint ($bp-sm) {
+    padding: 0 150px 60px 10px;
+  }
+
+  @include breakpoint ($bp-lg) {
+    padding: 0 0 70px;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 60px;
+    height: 62px;
+    background-image: url('../assets/double.svg');
+    background-size: cover;
+
+    @include breakpoint ($bp-sm) {
+      width: 155px;
+      height: 150px;
+    }
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: 62px;
+    top: 0;
+    right: 0;
+    width: 30px;
+    background-image: url('../assets/single.svg');
+    background-repeat: repeat-y;
+    background-position: bottom;
+
+    @include breakpoint ($bp-sm) {
+      width: 70px;
+      bottom: 150px;
+    }
+  }
+
+  .section-content {
+    max-width: $container-max;
+    margin: 0 auto;
+  }
+
+  &.bg-aqua {
+    background-color: $color-ma-aqua;
+  }
+
+  &.edge-lav {
+
+    &::after {
+      background-image: url('../assets/double-lav.svg');
+    }
+
+    &::before {
+      background-image: url('../assets/single-lav.svg');
+    }
+  }
+
+  &.edge-red {
+
+    &::after {
+      background-image: url('../assets/double-red.svg');
+    }
+
+    &::before {
+      background-image: url('../assets/single-red.svg');
+    }
+  }
+}
