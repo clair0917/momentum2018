@@ -76,7 +76,7 @@
     }
 
     &.register {
-      @include cut-corner-white;
+      @include cut-corner;
 
       background-color: $color-ma-orange;
 

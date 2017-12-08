@@ -806,16 +806,3 @@ pre .regexp {
 .kss-menu-full-width:hover {
   border: 2px solid rgba(0, 0, 0, 0.25);
 }
-
-.kss-sidebar {
-  display: none;
-}
-
-#kss-node .kss-wrapper {
-  max-width: none;
-  margin: 0;
-}
-
-#kss-node .kss-content {
-  margin-left: 0 !important;
-}

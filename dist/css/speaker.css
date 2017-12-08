@@ -24,9 +24,6 @@ h2 {
       font-size: 54px;
       font-size: 3.375rem; } }
 
-.speaker-wrapper {
-  background-color: #77c5d5; }
-
 .speaker__collection-header {
   width: 100%;
   display: inline-block;
@@ -81,9 +78,12 @@ h2 {
     border-color: transparent;
     border-style: solid;
     border-width: 30px;
-    border-left-color: #77c5d5;
-    border-top-color: #77c5d5;
+    border-left-color: #ffffff;
+    border-top-color: #ffffff;
     transform: rotate(8deg); }
+    .bg-aqua .speaker__item .speaker__image::after {
+      border-left-color: #77c5d5;
+      border-top-color: #77c5d5; }
   @media (min-width: 768px) {
     .speaker__item .speaker__image {
       max-width: 230px;

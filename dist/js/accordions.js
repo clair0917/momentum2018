@@ -1,6 +1,5 @@
 $(document).ready(function() {
 
-
   $('.accordion-section').each(function() {
     var $section = $(this);
     var $trigger = $section.find('.accordion-trigger');

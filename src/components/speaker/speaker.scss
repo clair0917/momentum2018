@@ -9,10 +9,6 @@
 // Import site utilities.
 @import '../../global/utils/init';
 
-.speaker-wrapper {
-  background-color: $color-ma-aqua;
-}
-
 .speaker__collection-header {
   width: 100%;
   display: inline-block;
@@ -69,7 +65,7 @@
   }
 
   .speaker__image {
-    @include cut-corner-blue;
+    @include cut-corner;
 
     @include breakpoint ($bp-sm) {
       max-width: 230px;

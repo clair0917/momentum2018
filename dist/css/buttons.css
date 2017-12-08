@@ -51,6 +51,9 @@ h2 {
     border-left-color: #ffffff;
     border-top-color: #ffffff;
     transform: rotate(8deg); }
+    .bg-aqua .btn::after {
+      border-left-color: #77c5d5;
+      border-top-color: #77c5d5; }
   @media (min-width: 768px) {
     .btn {
       max-width: 585px; } }

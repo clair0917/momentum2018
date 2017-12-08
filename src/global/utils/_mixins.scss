@@ -91,7 +91,7 @@
 
 // Sliced Corner
 // angled to 37degrees per brand standard
-@mixin cut-corner-white(){
+@mixin cut-corner(){
 
   &::after {
     content: '';
@@ -104,22 +104,11 @@
     border-left-color: $color-white;
     border-top-color: $color-white;
     transform: rotate(8deg);
-  }
-}
 
-@mixin cut-corner-blue(){
-
-  &::after {
-    content: '';
-    position: absolute;
-    top: -10px;
-    left: -5px;
-    border-color: transparent;
-    border-style: solid;
-    border-width: 30px;
-    border-left-color: $color-ma-aqua;
-    border-top-color: $color-ma-aqua;
-    transform: rotate(8deg);
+      .bg-aqua & {
+        border-left-color: $color-ma-aqua;
+        border-top-color: $color-ma-aqua;
+      }
   }
 }
 

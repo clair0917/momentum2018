@@ -16,7 +16,7 @@
 .btn {
   @include font-stack-heavy;
   @include fontsize(18);
-  @include cut-corner-white;
+  @include cut-corner;
   position: relative;
   display: block;
   background-color: $color-ma-orange;

@@ -95,6 +95,9 @@ h2 {
         border-left-color: #ffffff;
         border-top-color: #ffffff;
         transform: rotate(8deg); }
+        .bg-aqua .header__navigation li.register::after {
+          border-left-color: #77c5d5;
+          border-top-color: #77c5d5; }
       .header__navigation li.register a {
         color: #ffffff;
         padding: 0 5px 0 15px; }
